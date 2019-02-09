@@ -1,0 +1,66 @@
+{
+  "name": "tasks-time-tracker-react",
+  "version": "1.0.0",
+  "description": "Organize and keep track of all your tasks",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebrahim-hamdy/tasks-time-tracker-react.git"
+  },
+  "author": "Ebrahim Hamdy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ebrahim-hamdy/tasks-time-tracker-react/issues"
+  },
+  "homepage": "https://github.com/Ebrahim-hamdy/tasks-time-tracker-react#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.4.6",
+    "babel-loader": "^8.0.5",
+    "chalk": "^2.4.2",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "cssnano": "^4.1.8",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.5.0",
+    "react-hot-loader": "^4.6.3",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.28.4",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.2.1",
+    "webpack-command": "^0.4.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-delay-render": "^0.1.2",
+    "react-dom": "^16.7.0",
+    "react-imported-component": "^5.4.0",
+    "react-router-dom": "^4.3.1",
+    "semantic-ui-react": "^0.84.0"
+  },  
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "sass"
+  ]
+}
