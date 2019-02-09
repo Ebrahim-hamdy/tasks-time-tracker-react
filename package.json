@@ -4,7 +4,12 @@
   "description": "Organize and keep track of all your tasks",
   "main": "index.js",
   "scripts": {
-    
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "dev": "webpack-dev-server --env.env=dev",
+    "dev:bundleanalyzer": "yarn dev --env.addons=bundleanalyzer",
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=production webpack -p --env.env=prod",
+    "build:bundleanalyzer": "yarn build --env.addons=bundleanalyzer"
   },
   "repository": {
     "type": "git",
