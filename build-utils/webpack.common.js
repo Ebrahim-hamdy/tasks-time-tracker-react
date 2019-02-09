@@ -27,8 +27,16 @@ module.exports = {
       use: ['babel-loader']
     },
     {
-      test: /\.(png|svg|jpg)$/,
-      use: ['file-loader']
+      test: /\.(gif|png|jpg|svg)(\?.*$|$)/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            publicPath: 'public/assets'
+          },
+        },
+      ],
     }
     ]
   },
@@ -55,7 +63,7 @@ module.exports = {
       }
     }
   },
-  
+
   plugins: [
     htmlPlugin
   ]

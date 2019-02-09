@@ -55,13 +55,13 @@
   },
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.7.0",
+    "react": "^16.8.0",
     "react-delay-render": "^0.1.2",
-    "react-dom": "^16.7.0",
+    "react-dom": "^16.8.0",
     "react-imported-component": "^5.4.0",
     "react-router-dom": "^4.3.1",
     "semantic-ui-react": "^0.84.0"
-  },  
+  },
   "keywords": [
     "react",
     "webpack",

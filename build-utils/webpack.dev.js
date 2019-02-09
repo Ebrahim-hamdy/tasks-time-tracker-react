@@ -7,7 +7,7 @@ const host = 'localhost';
 module.exports = {
   mode: 'development',
   devtool: 'eval',
-  
+
   entry: {
     app: `${commonPaths.appEntry}/index.jsx`
   },
@@ -15,7 +15,7 @@ module.exports = {
   output: {
     filename: '[name].[hash].js'
   },
-  
+
   module: {
     rules: [
       {
@@ -49,6 +49,7 @@ module.exports = {
       warnings: false,
       errors: true
     },
+
     after() {
       process.stdout.write(`dev server is running: http://${host}:${port}\n`);
     }

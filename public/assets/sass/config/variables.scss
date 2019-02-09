@@ -1,0 +1,116 @@
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+
+/* ============================================
+   Colours
+*/
+$color--default: #000;
+$color--link: #000;
+$color--white: #fff;
+$color--error: #C3272B;
+$color--black: #000;
+
+/* ============================================
+   Typography
+   :: Default to system font stack
+*/
+$font--primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font--secondary: 'Droid Sans Mono', monospace;
+
+$base-font-size: 16px;
+$base-line-height: 25px;
+$font-sizes: (
+
+    // non-standard large sizes
+    giga:    80px,
+    mega:    60px,
+    kilo:    48px,
+
+    // standard sizes
+    alpha:   38px,
+    beta:    30px,
+    gamma:   28px,
+    delta:   22px,
+    epsilon: 20px,
+    zeta:    16px,
+
+    // non-standard small sizes
+    milli:   14px
+);
+
+
+/* ============================================
+    Wrappers and grids
+*/
+$wrapper-width: 1300px;
+$gutter: 40px;
+
+
+/* ============================================
+   Breakpoints
+*/
+$breakpoints: (
+    'wide'          '(max-width: 1440px)',
+    'desktop'       '(max-width: 1200px)',
+    'laptop'        '(max-width: 1000px)',
+    'tablet'        '(max-width: 700px)',
+    'mobile'        '(max-width: 650px)',
+);
+
+$breakpoint-has-widths: (
+    'wide',
+    'desktop',
+    'laptop',
+    'tablet',
+    'mobile'
+);
+
+
+/* ============================================
+    Transition speeds
+*/
+$enable-transitions: true;
+$default-transition-speed: 300ms;
+$transition-base:        all .2s ease-in-out !default;
+$transition-fade:        opacity .15s linear !default;
+$transition-collapse:    height .35s ease !default;
+$modal-transition: transform .3s ease-out !default;
+
+
+/* ============================================
+    Grid columns
+    Set the number of columns and specify the width of the gutters.
+*/
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+/* ============================================
+    Border Radius
+*/
+
+$border-radius:          .25rem !default;
+$border-radius-lg:       .3rem !default;
+$border-radius-sm:       .2rem !default;
+
+/* ============================================
+    Cards
+*/
+
+$card-spacer-y:            .75rem !default;
+$card-spacer-x:            1.25rem !default;
+$card-border-width:        1px !default;
+$card-border-radius:       $border-radius !default;
+$card-border-color:        rgba($color--black,.125) !default;
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-cap-bg:              rgba($color--black, .03) !default;
+$card-bg:                  $color--white !default;
+
+$card-img-overlay-padding: 1.25rem !default;
+
+$card-deck-margin:          ($grid-gutter-width / 2) !default;
+
+$card-columns-count:        3 !default;
+$card-columns-gap:          1.25rem !default;
+$card-columns-margin:       $card-spacer-y !default;
