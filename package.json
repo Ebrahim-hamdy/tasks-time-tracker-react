@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ebrahim-hamdy/tasks-time-tracker-react.git"
+    "url": "git@github.com:Ebrahim-hamdy/tasks-time-tracker-react.git"
   },
   "author": "Ebrahim Hamdy",
   "license": "ISC",

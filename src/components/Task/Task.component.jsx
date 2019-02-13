@@ -4,6 +4,15 @@ import TaskTimer from './Timer/Timer';
 import TaskList from './List/List';
 
 const TaskComponent = () => {
+
+  const task = {
+    _id: null,
+    taskName: '',
+    taskDescription: '',
+    minutes: 0,
+    seconds: 0 
+  };
+
   const tasks = [
     {
       name: 'First Task',
@@ -21,7 +30,7 @@ const TaskComponent = () => {
 
   return(
     <div className="app app--main">
-      <TaskTimer />
+      <TaskTimer task={task}/>
       <TaskList  tasks={tasks}/>
     </div>
   );
