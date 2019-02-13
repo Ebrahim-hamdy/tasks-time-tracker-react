@@ -60,7 +60,8 @@
     "react-dom": "^16.8.0",
     "react-imported-component": "^5.4.0",
     "react-router-dom": "^4.3.1",
-    "semantic-ui-react": "^0.84.0"
+    "semantic-ui-react": "^0.84.0",
+    "superstruct": "^0.6.0"
   },
   "keywords": [
     "react",

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import TaskTimer from './Timer/Timer';
-import TaskList from './List/List';
+import TaskTimer from './Timer/TaskTimer';
+import TaskList from './List/TaskList';
 
 const TaskComponent = () => {
 
@@ -10,7 +10,7 @@ const TaskComponent = () => {
     taskName: '',
     taskDescription: '',
     minutes: 0,
-    seconds: 0 
+    seconds: 0
   };
 
   const tasks = [

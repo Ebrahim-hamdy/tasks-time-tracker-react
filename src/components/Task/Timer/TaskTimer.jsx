@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./Timer.scss";
+import "./TaskTimer.scss";
 
 class TaskTimer extends React.Component {
-  
+
   state = {
     task: this.props.task,
     isRunning: false,

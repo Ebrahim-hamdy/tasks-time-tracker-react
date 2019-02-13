@@ -1,6 +1,8 @@
 import React from "react";
 
-import './List.scss';
+import TaskForm from '../Form/TaskForm';
+
+import './TaskList.scss';
 
 const TaskList = (props) => {
   const tasks = props.tasks;
