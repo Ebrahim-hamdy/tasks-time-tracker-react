@@ -2,7 +2,7 @@ import React from "react";
 
 import { useForm, useField } from "../../../shared/utilities/Form";
 
-//import "./Timer.scss";
+import "./TaskForm.scss";
 
 const Field = ({
   label,
@@ -29,14 +29,14 @@ const Field = ({
         onChange={onChange}
         onBlur={() => !pristine && validate()}
         {...other}
-        className={`task-label ${
-          showErrors ? "error" : ""
-        }`}
+        className={`task-label ${showErrors ? "error" : ""}`}
       />
       {showErrors &&
-        errors.map(
-          errorMsg => <p className='error' key={errorMsg}>{errorMsg}</p>
-      )}
+        errors.map(errorMsg => (
+          <p className="error" key={errorMsg}>
+            {errorMsg}
+          </p>
+        ))}
     </>
   );
 };
@@ -44,45 +44,53 @@ const Field = ({
 const TaskForm = props => {
   const form = useForm({
     onSubmit: (formData, valid) => {
-      if(!valid) return;
+      props.isValid = valid;
+      if (!valid) return;
     }
-  })
+  });
 
-  const taskNameField = useField('taskName', form, {
-    defaultValue: '',
+  const taskNameField = useField("taskName", form, {
+    defaultValue: "",
     validation: [
       formData => {
-        return 'Task name is required';
+        return "Task name is required";
       }
     ],
     fieldsToValidateOnChange: []
-  })
+  });
 
-  const taskDescField = useField('taskDesc', form, {
-    defaultValue: '',
+  const taskDescField = useField("taskDesc", form, {
+    defaultValue: "",
     validation: [
       formData => {
-        return 'Task Description is required';
+        return "Task Description is required";
       }
     ],
     fieldsToValidateOnChange: []
-  })
+  });
 
   let requiredFields = [taskNameField, taskDescField];
 
-  return(
-    <form onSubmit={form.onSubmit}>
-      <Field
-        {...taskNameField}
-        formSubmitted={form.submitted}
-        placeholder="Task name"
-      />
+  return (
+    <>
+      <form
+        className={`task-form ${props.showForm ? "task-form--show" : ""}`}
+        onSubmit={form.onSubmit}
+      >
+        <Field
+          {...taskNameField}
+          formSubmitted={form.submitted}
+          placeholder="Task name"
+        />
 
-      <Field
-        {...taskDescField}
-        formSubmitted={form.submitted}
-        placeholder="Task Description"
-      />
-    </form>
+        <Field
+          {...taskDescField}
+          formSubmitted={form.submitted}
+          placeholder="Task Description"
+        />
+      </form>
+    </>
   );
-}
+};
+
+export default TaskForm;

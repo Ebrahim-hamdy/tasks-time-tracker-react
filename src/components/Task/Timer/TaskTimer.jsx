@@ -1,13 +1,15 @@
 import React from "react";
 
+import TaskForm from "../Form/TaskForm";
+
 import "./TaskTimer.scss";
 
 class TaskTimer extends React.Component {
-
   state = {
     task: this.props.task,
     isRunning: false,
-    showForm: false
+    showForm: false,
+    isValid: false
   };
 
   timerTime = 0;
@@ -18,7 +20,7 @@ class TaskTimer extends React.Component {
       showForm: !prevState.showForm
     }));
 
-    if (!this.state.isRunning) {
+    if (!this.state.isRunning && this.state.isValid) {
       this.setState({
         showForm: false,
         isRunning: true
@@ -56,7 +58,7 @@ class TaskTimer extends React.Component {
   };
 
   render() {
-    const { task, isRunning, showForm } = this.state;
+    const { task, isRunning, showForm, isValid } = this.state;
 
     return (
       <div className="timer-area">
@@ -101,25 +103,7 @@ class TaskTimer extends React.Component {
             Cancel
           </button>
 
-          <form
-            className={`task-form ${showForm ? "task-form--show" : ""}`}
-            noValidate
-          >
-            <input
-              type="text"
-              className="task-label"
-              name="taskName"
-              placeholder="Task name&hellip;"
-              required
-            />
-            <input
-              type="text"
-              className="task-label"
-              name="desc"
-              placeholder="Task Description&hellip;"
-              required
-            />
-          </form>
+          <TaskForm showForm={showForm} isValid={isValid} />
         </div>
       </div>
     );
